@@ -1,7 +1,7 @@
 //========================================
 //*author: ABNQ
 //*email:abnq_cn@qq.com
-//*create time :2020-06-08 09:24
+//*create time :
 //*filename:my_str.c
 //*description:
 //========================================
@@ -10,7 +10,8 @@
 #include <string.h>
 #include "include.h"
 
-/*char *my_strcat(char *dest, const char *src);
+/*
+char *my_strcat(char *dest, const char *src);
 int  my_strcmp(const char *s1, const char *s2);
 int  my_strncmp(const char *s1, const char *s2, unsigned int n);
 int  my_strcasecmp(const char *s1, const char *s2);
@@ -69,20 +70,6 @@ char * my_strcpy(char *dest, const char *src){
 		
 	char *tmp = dest;
 	while( ( *dest++ = *src++) != '\0');
-	/*
-	while(*src != '\0'){
-		*dest++ = *src++;
-	}
-	*dest = *src;
-	*/
-	/*
-	while(*src != '\0'){
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = *src;
-*/
 	return tmp;
 }
 
@@ -90,7 +77,7 @@ char * my_strtok(char *str, const char *delim){
 	//assert(delim != NULL);
 
 	static char *last_str = NULL;
-	if(str == NULL && (str = last_str) == NULL){	//第一次使用my_strtok参数1为NULL的话，直接返回
+	if(str == NULL && (str = last_str) == NULL){	
 		return NULL;
 	}
 	char *tmp_str = str;
@@ -101,7 +88,7 @@ char * my_strtok(char *str, const char *delim){
 		while(*tmp_delim != '\0'){
 			if(*tmp_delim == *tmp_str){
 				last_str = tmp_str + 1;
-				if((int *) (tmp_str - str) == NULL){		//防止第一个是分隔符
+				if((int *) (tmp_str - str) == NULL){		
 					str = last_str;
 					break;
 				}
@@ -112,7 +99,7 @@ char * my_strtok(char *str, const char *delim){
 		}
 		tmp_str++;
 	}
-	return str;			//到了字符串尾，返回最后一个分隔符地址加1
+	return str;			
 }
 
 char *my_strstr(const char *haystack, const char *needle){
