@@ -3,7 +3,7 @@
 //*email:abnq_cn@qq.com
 //*create time :2020-06-08 09:24
 //*filename:my_str.c
-//*description:各种str的实现(cat,cmp,ncmp,casecmp,cpy,tok,str)
+//*description:
 //========================================
 #include <stdio.h>
 #include <stdlib.h>
